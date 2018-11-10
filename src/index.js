@@ -88,8 +88,7 @@ class Littera {
    * @param {string} language
    */
   setLanguage = language => {
-    if (!language)
-      throw Error("Language is undefined or not a String.");
+    if (!language) throw Error("Language is undefined or not a String.");
 
     this.language = language;
   };
@@ -100,10 +99,7 @@ class Littera {
    * @returns {string}
    */
   activeLanguage = () => {
-    if (
-      !this.language
-    )
-      throw "Language is not set.";
+    if (!this.language) throw "Language is not set.";
     return this.language;
   };
 
