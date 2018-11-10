@@ -13,8 +13,8 @@ Use `npm install littera` or clone/download the repository.
 The basic concept is that you load an object with translations for each language and then just get a string with the right translation returned adequate to the active language.
 
 Most basic example
-```javascript
 
+```javascript
 // Import the library.
 import Littera from "littera";
 
@@ -42,15 +42,14 @@ function main() {
   const translation = _littera.translate("unique.example");
   console.log(translation); // Returns => Beispiel
 }
-
 ```
 
-Give it a try on *codesandbox*
+Give it a try on _codesandbox_
 [![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
 
 Translations can also be imported from a JSON or YAML file.
-```javascript
 
+```javascript
 // Import the library.
 import Littera from "littera";
 
@@ -71,10 +70,10 @@ function main() {
     console.log(translation); // Returns => Beispiel
   });
 }
-
 ```
 
 ## Build instructions
+
 After cloning the repo, install all dependencies using `npm install`.
 
 Build the docs:
