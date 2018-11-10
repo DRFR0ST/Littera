@@ -1,6 +1,8 @@
-# littera
+# Littera
 
 🌐 Lightweight library making multilingualism easier.
+
+![build](https://travis-ci.com/DRFR0ST/Littera.svg?branch=master)
 
 ## Install
 
@@ -43,6 +45,9 @@ function main() {
 
 ```
 
+Give it a try on *codesandbox*
+[![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
+
 Translations can also be imported from a JSON or YAML file.
 ```javascript
 
@@ -68,6 +73,18 @@ function main() {
 }
 
 ```
+
+## Build instructions
+After cloning the repo, install all dependencies using `npm install`.
+
+Build the docs:
+`npm run docs`
+
+Build the coverage:
+`npm run coverage`
+
+Test the library:
+`npm test`
 
 ## API
 
