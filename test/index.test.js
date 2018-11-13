@@ -29,23 +29,3 @@ describe("Littera base", () => {
     });
   });
 });
-
-describe("Littera with JSON", () => {
-  const _littr = new Littera();
-
-  test("import translations", () => {
-    _littr.importJSON("../test/translations.json", () => {
-      expect(_littr.translate("example", "de_DE")).toBe("Beispiel");
-    });
-  });
-});
-
-describe("Littera with YAML", () => {
-  const _littr = new Littera();
-
-  test("import translations", () => {
-    _littr.importYAML("../test/translations.yaml", () => {
-      expect(_littr.translate("example", "de_DE")).toBe("Beispiel");
-    });
-  });
-});
