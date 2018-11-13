@@ -47,8 +47,6 @@ function main() {
 Give it a try on _codesandbox_
 [![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
 
-```
-
 ## Build instructions
 
 After cloning the repo, install all dependencies using `npm install`.
