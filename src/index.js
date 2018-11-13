@@ -47,9 +47,11 @@ class Littera {
    * @param {function} callback
    * {@link importTranslations}
    * @callback
-   * @deprecated
-   
+   * @deprecated beacause of the "fs not found" problem in React environment.
+   */
   importJSON = (path, callback) => {
+    const fs = undefined; // Should be imported. [Not importing since its deprecated]
+
     fs.readFile(require.resolve(path), (err, data) => {
       if (err) {
         if (callback) callback(null, err);
@@ -61,7 +63,7 @@ class Littera {
       }
     });
   };
-  */
+  
   /**
    * @name importYAML
    * @description Imports translations from a YAML file.
@@ -69,9 +71,11 @@ class Littera {
    * @param {function} callback
    * {@link importTranslations}
    * @callback
-   * @deprecated
-  
+   * @deprecated beacause of the "fs not found" problem in React environment.
+   */
   importYAML = (path, callback) => {
+    const YAML = undefined; // Should be imported. [Not importing since its deprecated]
+
     YAML.load(path, (result, err) => {
       if (err) {
         if (callback) callback(null, err);
@@ -82,7 +86,7 @@ class Littera {
       }
     });
   };
- */
+
 
   /**
    * @name setLanguage
