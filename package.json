@@ -39,9 +39,7 @@
   "keywords": [
     "generator-nod"
   ],
-  "dependencies": {
-    "yamljs": "^0.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",

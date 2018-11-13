@@ -120,18 +120,7 @@ Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Sta
 
 **Meta**
 
--   **deprecated**: importJSON = (path, callback) => {
-    fs.readFile(require.resolve(path), (err, data) => {
-    if (err) {
-    if (callback) callback(null, err);
-    throw Error(err);
-    } else {
-    const result = JSON.parse(data);
-    this.importTranslations(result);
-    if (callback) callback(result, null);
-    }
-    });
-    };
+-   **deprecated**: beacause of the "fs not found" problem in React environment.
 
 
 ### importYAML
@@ -147,17 +136,7 @@ Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Sta
 
 **Meta**
 
--   **deprecated**: importYAML = (path, callback) => {
-    YAML.load(path, (result, err) => {
-    if (err) {
-    if (callback) callback(null, err);
-    throw Error(err);
-    } else {
-    this.importTranslations(result);
-    if (callback) callback(result, null);
-    }
-    });
-    };
+-   **deprecated**: beacause of the "fs not found" problem in React environment.
 
 
 ### setLanguage

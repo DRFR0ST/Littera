@@ -45,7 +45,6 @@ class Littera {
    * @description Imports translations from a JSON file.
    * @param {string} path Path to the JSON file.
    * @param {function} callback
-   * {@link importTranslations}
    * @callback
    * @deprecated beacause of the "fs not found" problem in React environment.
    */
@@ -69,7 +68,6 @@ class Littera {
    * @description Imports translations from a YAML file.
    * @param {string} path Path to the YAML file.
    * @param {function} callback
-   * {@link importTranslations}
    * @callback
    * @deprecated beacause of the "fs not found" problem in React environment.
    */
