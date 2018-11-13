@@ -1,6 +1,7 @@
 // @flow
 
 import YAML from "yamljs";
+import * as fs from 'fs';
 
 class Littera {
   /**
@@ -48,8 +49,6 @@ class Littera {
    * @callback
    */
   importJSON = (path, callback) => {
-    const fs = require("fs");
-
     fs.readFile(require.resolve(path), (err, data) => {
       if (err) {
         if (callback) callback(null, err);
