@@ -143,6 +143,22 @@ Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Sta
 -   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Path to the JSON file.
 -   `callback` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** [importTranslations](#importtranslations)
 
+**Meta**
+
+-   **deprecated**: importJSON = (path, callback) => {
+    fs.readFile(require.resolve(path), (err, data) => {
+    if (err) {
+    if (callback) callback(null, err);
+    throw Error(err);
+    } else {
+    const result = JSON.parse(data);
+    this.importTranslations(result);
+    if (callback) callback(result, null);
+    }
+    });
+    };
+
+
 ### importYAML
 
 Imports translations from a YAML file.
@@ -153,6 +169,21 @@ Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Sta
 
 -   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Path to the YAML file.
 -   `callback` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** [importTranslations](#importtranslations)
+
+**Meta**
+
+-   **deprecated**: importYAML = (path, callback) => {
+    YAML.load(path, (result, err) => {
+    if (err) {
+    if (callback) callback(null, err);
+    throw Error(err);
+    } else {
+    this.importTranslations(result);
+    if (callback) callback(result, null);
+    }
+    });
+    };
+
 
 ### setLanguage
 

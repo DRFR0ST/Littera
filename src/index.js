@@ -1,7 +1,7 @@
 // @flow
 
-import YAML from "yamljs";
-import * as fs from 'fs';
+/* import YAML from "yamljs";
+import * as fs from 'fs'; */
 
 class Littera {
   /**
@@ -47,7 +47,8 @@ class Littera {
    * @param {function} callback
    * {@link importTranslations}
    * @callback
-   */
+   * @deprecated
+   
   importJSON = (path, callback) => {
     fs.readFile(require.resolve(path), (err, data) => {
       if (err) {
@@ -60,7 +61,7 @@ class Littera {
       }
     });
   };
-
+  */
   /**
    * @name importYAML
    * @description Imports translations from a YAML file.
@@ -68,7 +69,8 @@ class Littera {
    * @param {function} callback
    * {@link importTranslations}
    * @callback
-   */
+   * @deprecated
+  
   importYAML = (path, callback) => {
     YAML.load(path, (result, err) => {
       if (err) {
@@ -80,6 +82,7 @@ class Littera {
       }
     });
   };
+ */
 
   /**
    * @name setLanguage
