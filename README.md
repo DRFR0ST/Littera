@@ -47,29 +47,6 @@ function main() {
 Give it a try on _codesandbox_
 [![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
 
-Translations can also be imported from a JSON or YAML file.
-
-```javascript
-// Import the library.
-import Littera from "littera";
-
-const translationsPath = "./translations.json"; // or "./translations.yaml" for YAML files.
-
-function main() {
-  // Create an instance of Littera and load the translations.
-  const _littera = new Littera();
-
-  // Import translations from a file.
-  // Use importYAML(...) for YAML files.
-  _littera.importJSON(translationsPath, () => {
-    // Set the active language to German (de_DE)
-    _littera.setLanguage("de_DE");
-
-    // Get the right translation for the active language using a key.
-    const translation = _littera.translate("unique.example");
-    console.log(translation); // Returns => Beispiel
-  });
-}
 ```
 
 ## Build instructions
