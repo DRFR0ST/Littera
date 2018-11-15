@@ -37,7 +37,10 @@
     ]
   },
   "keywords": [
-    "generator-nod"
+    "multilingual",
+    "translation",
+    "language",
+    "contries"
   ],
   "dependencies": {},
   "devDependencies": {
