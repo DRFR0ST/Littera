@@ -45,6 +45,7 @@ function main() {
 ```
 
 Give it a try on _codesandbox_
+
 [![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
 
 ## Build instructions
@@ -59,3 +60,13 @@ Build the coverage:
 
 Test the library:
 `npm test`
+
+## API
+
+Here comes the geeky part - [documentation](https://drfr0st.github.io/Littera/).
+
+## License
+
+[MIT License](https://github.com/DRFR0ST/Littera/blob/master/LICENSE)
+
+Copyright (c) 2018 Mike Eling
