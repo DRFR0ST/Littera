@@ -6,6 +6,7 @@
 [![npm](https://img.shields.io/npm/v/littera.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
 [![npm](https://img.shields.io/npm/dt/littera.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=for-the-badge)](https://gitter.im/littera-dev/)
 
 
 ## Install
