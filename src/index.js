@@ -38,7 +38,7 @@ class Littera {
    * @returns {Object}
    */
   getTranslations = (language = null) => {
-    if (language !== null && !(language instanceof String))
+    if (language === null && !(language instanceof String))
       throw Error("Language is not a string.");
 
     if (language) return this.translations[language];
