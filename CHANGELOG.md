@@ -1,3 +1,7 @@
+## [1.0.8](https://github.com/DRFR0ST/littera/compare/v1.0.0...v1.0.8) (2018-11-17)
+
+
+
 ## [1.0.7](https://github.com/DRFR0ST/littera/compare/v1.0.0...v1.0.7) (2018-11-16)
 
 
