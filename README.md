@@ -68,10 +68,10 @@ Test the library:
 
 ## API
 
-Here comes the geeky part - [documentation](https://drfr0st.github.io/Littera/).
+Here comes the geeky part - [documentation](https://drfr0st.github.io/littera/).
 
 ## License
 
-[MIT License](https://github.com/DRFR0ST/Littera/blob/master/LICENSE)
+[MIT License](https://github.com/DRFR0ST/littera/blob/master/LICENSE)
 
 Copyright (c) 2018 Mike Eling
