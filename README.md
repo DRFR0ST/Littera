@@ -2,7 +2,7 @@
 
 🌐 Lightweight library making multilingualism easier.
 
-[![Travis (.com)](https://img.shields.io/travis/com/DRFR0ST/Littera.svg?style=for-the-badge)](https://github.com/DRFR0ST/Littera/)
+[![Travis (.com)](https://img.shields.io/travis/com/DRFR0ST/littera.svg?style=for-the-badge)](https://travis-ci.com/DRFR0ST/littera)
 [![npm](https://img.shields.io/npm/v/littera.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
 [![npm](https://img.shields.io/npm/dt/littera.svg?style=for-the-badge)](https://www.npmjs.com/package/littera)
