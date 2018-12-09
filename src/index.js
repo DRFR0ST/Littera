@@ -5,13 +5,18 @@
  * @public
  */
 class Littera {
+
   /**
    * @constructor
    * @param {Object} translations
+   * @param {Object} options
    */
-  constructor(translations = {}) {
+  constructor(translations = {}, options) {
     this.translations = translations;
     this.language = null;
+    this.options = options || {
+      stackLanguages: false 
+    };
   }
 
   /**
@@ -24,12 +29,12 @@ class Littera {
   translate = (key, language = this.language) => {
     if (language === null) throw Error("Language is not set.");
     if (
-      this.translations === undefined ||
-      !(this.translations[language] instanceof Object)
+      !this.translations ||
+      !this.translations instanceof Object
     )
       throw Error(`Translations for ${this.language} not found.`);
 
-    return this.translations[language][key];
+    return this.options.stackLanguages ? this.translations[key][language] : this.translations[language][key];
   };
 
   /**

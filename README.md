@@ -17,10 +17,9 @@ Use `npm install littera` or clone/download the repository.
 
 The basic concept is that you load an object with translations for each language and then just get a string with the right translation returned adequate to the active language.
 
-Most basic example
+#### Most basic example
 
 ```javascript
-// Import the library.
 import Littera from "littera";
 
 // Object containing translations for each language and key.
@@ -36,17 +35,40 @@ const translations = {
   }
 };
 
-function main() {
-  // Create an instance of Littera and load the translations.
-  const _littera = new Littera(translations);
+// Create an instance of Littera and load the translations.
+const _littera = new Littera(translations);
 
-  // Set the active language to German (de_DE)
-  _littera.setLanguage("de_DE");
+// Set the active language to German (de_DE)
+_littera.setLanguage("de_DE");
 
-  // Get the right translation for the active language using a key.
-  const translation = _littera.translate("unique.example");
-  console.log(translation); // Returns => Beispiel
+// Get the right translation for the active language using a key.
+const translation = _littera.translate("unique.example");
+console.log(translation); // Returns => Beispiel
+```
+
+#### Stacked languages example
+
+```javascript
+import Littera from 'littera';
+
+// Object containing translations for each language and key with stacked languages.
+const translations = {
+  "unique.example": {
+    en_US: "Example",
+    pl_PL: "Przykład",
+    de_DE: "Beispiel"
+  }
 }
+
+// Create an instance of Littera and load the translations.
+const _littera = new Littera(translations, { stackLanguages: true }); // !** { stackLanguages: true } **!
+
+// Set the active language to German (de_DE)
+_littera.setLanguage("de_DE");
+
+// Get the right translation for the active language using a key.
+const translation = _littera.translate("unique.example");
+console.log(translation); // Returns => Beispiel
 ```
 
 Give it a try on _codesandbox_
