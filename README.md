@@ -81,14 +81,14 @@ Give it a try on _codesandbox_
 You can pass two object arguments `translations` and `options`.
 
 #### Options default
-```
+```javascript
 {
   stackLanguages: false  // Use the stacked type of translations.
 }
 ```
 
 #### Translations example
-```
+```javascript
 {
   en_US: {
     "unique.example": "Example"
@@ -102,7 +102,7 @@ You can pass two object arguments `translations` and `options`.
 }
 ```
 or for stacked languages
-```
+```javascript
 {
   "unique.example": {
     en_US: "Example",
@@ -111,7 +111,7 @@ or for stacked languages
   }
 }
 ```
-Note: You have to set `stackLanguages` to `true` in options.
+Note: You have to set `stackLanguages: true` in options to use stacked languages.
 
 ## Build instructions
 
