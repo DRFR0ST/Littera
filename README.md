@@ -75,6 +75,44 @@ Give it a try on _codesandbox_
 
 [![Code Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n5wlmrwwm4)
 
+## Instance
+
+`new Littera(translations, options)`
+You can pass two object arguments `translations` and `options`.
+
+#### Options default
+```
+{
+  stackLanguages: false  // Use the stacked type of translations.
+}
+```
+
+#### Translations example
+```
+{
+  en_US: {
+    "unique.example": "Example"
+  },
+  pl_PL: {
+    "unique.example": "Przykład"
+  },
+  de_DE: {
+    "unique.example": "Beispiel"
+  }
+}
+```
+or for stacked languages
+```
+{
+  "unique.example": {
+    en_US: "Example",
+    pl_PL: "Przykład",
+    de_DE: "Beispiel"
+  }
+}
+```
+Note: You have to set `stackLanguages` to `true` in options.
+
 ## Build instructions
 
 After cloning the repo, install all dependencies using `npm install`.
