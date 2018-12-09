@@ -78,6 +78,7 @@ Give it a try on _codesandbox_
 ## Instance
 
 `new Littera(translations, options)`
+
 You can pass two object arguments `translations` and `options`.
 
 #### Options default
