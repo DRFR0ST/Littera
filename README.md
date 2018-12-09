@@ -9,7 +9,8 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=for-the-badge)](https://gitter.im/littera-dev/)
 [![](https://img.shields.io/github/license/DRFR0ST/littera.svg?style=for-the-badge)](https://github.com/DRFR0ST/littera)
 [![](https://img.shields.io/codecov/c/github/DRFR0ST/littera.svg?style=for-the-badge)](https://codecov.io/gh/DRFR0ST/littera)
-[![](https://img.shields.io/requires/github/DRFR0ST/littera.svg?style=for-the-badge)](https://requires.io/github/DRFR0ST/littera/requirements/?branch=master)
+[![](https://img.shields.io/librariesio/github/DRFR0ST/littera.svg?style=for-the-badge)](https://libraries.io/github/DRFR0ST/littera)
+
 
 
 
