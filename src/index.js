@@ -1,22 +1,23 @@
 // @flow
 
+const defaultOptions = {
+  stackLanguages: false,
+};
+
 /**
  * @class
  * @public
  */
 class Littera {
-
   /**
    * @constructor
    * @param {Object} translations
    * @param {Object} options
    */
-  constructor(translations = {}, options) {
-    this.translations = translations;
+  constructor(translations = {}, options = defaultOptions) {
+    this.options = options;
     this.language = null;
-    this.options = options || {
-      stackLanguages: false 
-    };
+    this.translations = translations;
   }
 
   /**
@@ -27,14 +28,14 @@ class Littera {
    * translate("unique.example", "en_US");
    */
   translate = (key, language = this.language) => {
-    if (language === null) throw Error("Language is not set.");
-    if (
-      !this.translations ||
-      !this.translations instanceof Object
-    )
-      throw Error(`Translations for ${this.language} not found.`);
+    if (language === null) throw new Error("Language is not set.");
 
-    return this.options.stackLanguages ? this.translations[key][language] : this.translations[language][key];
+    if (!this.translations || Object.keys(this.translations) <= 0)
+      throw new Error(`Translations not found.`);
+
+    return this.options.stackLanguages
+      ? this.translations[key][language]
+      : this.translations[language][key];
   };
 
   /**
@@ -44,9 +45,9 @@ class Littera {
    */
   getTranslations = (language = null) => {
     if (language && (language.length <= 0 || !language instanceof String))
-      throw Error("Language is not a string or is empty.");
+      throw new Error("Language is not a string or is empty.");
 
-    if (language) return this.translations[language];
+    if (this.options.stackLanguages || language) return this.translations[language];
     return this.translations;
   };
 
@@ -55,10 +56,13 @@ class Littera {
    * @param {Object} translations
    */
   importTranslations = translations => {
-    if (!translations || !(translations instanceof Object))
-      throw Error("Translations is undefined or not an Object.");
+    if (!translations || !translations instanceof Object)
+      throw new Error("Translations is undefined or not an Object.");
 
-    if (this.language === null) this.language = Object.keys(translations)[0];
+    if (this.language === null)
+      this.language = this.options.stackLanguages
+        ? Object.keys(translations[Object.keys(translations)[0]])[0]
+        : Object.keys(translations)[0];
     this.translations = translations;
   };
 
@@ -67,7 +71,7 @@ class Littera {
    * @param {string} language
    */
   setLanguage = language => {
-    if (!language) throw Error("Language is undefined or not a String.");
+    if (!language) throw new Error("Language is undefined or not a String.");
 
     this.language = language;
   };
@@ -77,7 +81,7 @@ class Littera {
    * @returns {string}
    */
   activeLanguage = () => {
-    if (!this.language) throw "Language is not set.";
+    if (!this.language) throw new Error("Language is not set.");
     return this.language;
   };
 
@@ -85,7 +89,7 @@ class Littera {
    * @description Returns a list of imported languages.
    * @returns {Array}
    */
-  getLanguages = () => Object.keys(this.language);
+  getLanguages = () => this.options.stackLanguages ? Object.keys(this.translations[Object.keys(this.translations)[0]]) : Object.keys(this.translations);
 }
 
 export default Littera;
